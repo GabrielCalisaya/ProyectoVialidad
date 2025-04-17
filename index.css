@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #A5C837; /* Verde manzana */
+    --secondary-color: #45A6AE;
+    --dark-green: #4B8E00; /* Verde oscuro para los botones */
+    --font-family: 'Montserrat', sans-serif;
+    --transition-duration: 0.25s;
+}
+
+body, #encabezado {
+    transition: all var(--transition-duration);
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para alinear correctamente */
+    justify-content: center;
+    align-items: center; /* Centrar horizontalmente */
+    min-height: 100vh;
+    font-size: 1.875rem; /* 30px */
+    overflow: hidden;
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fuentes/Montserrat-Bold.ttf') format('truetype'), url('fuentes/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#encabezado {
+    width: 80vw;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px auto; 
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 2.5rem; 
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+/* Estilo general de los botones */
+.opcion {
+    background: var(--dark-green); /* Color de fondo verde oscuro */
+    margin: 20px; /* Espaciado entre botones */
+    padding: 12px 25px; /* Espaciado interno para el botón */
+    border-radius: 25px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    font-family: var(--font-family);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color var(--transition-duration), transform var(--transition-duration); /* Transición suave */
+}
+
+.opcion:hover {
+    background-color: #6C9B00; /* Un verde más claro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.logo1 {
+    width: 130px;
+    height: auto;
+}
+
+.logo2 {
+    width: 300px;
+    height: auto;
+}
+
+.logo3 {
+    width: 100px;
+    height: auto;
+}
+
+.correcta {
+    background-color: green;
+    color: white;
+    border: 5px solid white;
+}
+
+.incorrecta {
+    background-color: red;
+    color: white;
+    border: 5px solid white;
+}
+
+#pie-pagina {
+    position: absolute;
+    left: auto; 
+    bottom: 0;
+    right: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    background-color: white;
+}
+
+#celebracion-gif {
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el GIF */
+    width: 100%; /* O el tamaño que desees, por ejemplo, 100% del ancho de la pantalla */
+    height: 100%; /* O puedes ajustar el tamaño según lo que necesites */
+    z-index: 9999; /* Para asegurarte que esté por encima de todo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente si lo deseas */
+}
+
+/* Estilo para los videos y su contenido */
+#video-final-bien,
+#video-final-mal {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    text-align:center;
+}
+#video-entrada,
+#video-salida-bien,
+#video-salida-mal {
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.boton-inicio {
+    margin-bottom: 60px; /* Ajustar el margen inferior para no superponer el pie de página */
+    cursor: not-allowed; /* Cursor no permitido cuando está deshabilitado */
+    transition: background-color 0.3s, transform 0.2s; /* Efecto de transición */
+}
+
+.boton-final {
+    margin-bottom: 80px; /* Ajustar el margen inferior para no superponer el pie de página */
+}
+.boton-final:hover {
+    cursor: pointer; /* Cambia el cursor a mano cuando se puede presionar */
+    background-color: #6C9B00; /* Un verde más claro al pasar el ratón */
+}
+
+.boton-final:active {
+    transform: scale(0.98); /* Efecto de pulsación al presionar */
+}
+
+.boton-final:disabled {
+    opacity: 0.5; /* Efecto visual para el botón deshabilitado */
+    cursor: not-allowed; /* Cursor no permitido cuando está deshabilitado */
+}
+.boton-inicio:hover {
+    cursor: pointer; /* Cambia el cursor a mano cuando se puede presionar */
+    background-color: #6C9B00; /* Un verde más claro al pasar el ratón */
+}
+
+.boton-inicio:active {
+    transform: scale(0.98); /* Efecto de pulsación al presionar */
+}
+
+.boton-inicio:disabled {
+    opacity: 0.5; /* Efecto visual para el botón deshabilitado */
+    cursor: not-allowed; /* Cursor no permitido cuando está deshabilitado */
+}
+.fade-in {
+    opacity: 1;
+    transition: opacity 2s ease-in; /* Duración y estilo de la transición */
+}
+#exito-gif{
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%; /* Centrado verticalmente */
+    left: 52%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el GIF */
+    width: 100%; /* O el tamaño que desees, por ejemplo, 100% del ancho de la pantalla */
+    height: 100%; /* O puedes ajustar el tamaño según lo que necesites */
+    z-index:-5; /* Para asegurarte que esté por encima de todo */
+    background-color: 0;
+}
+.text-border {
+    color: black; /* Color del texto */
+    text-shadow: 
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff; /* Borde blanco más grueso */
+}
