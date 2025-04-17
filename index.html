@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="index.css"> <!-- Enlace al CSS -->
     <script src="base-de-preguntas.js"></script> <!-- Base de preguntas -->
     <script defer src="index.js"></script> <!-- Script principal -->
-    <link rel="icon" href="/logos/logo azul-naranja.png" type="image/x-icon">
+    <link rel="icon" href="./logos/logo azul-naranja.png" type="image/x-icon">
 </head>
 <body>
     
     <!-- Video de inicio -->
     <div id="video-inicio" class="visible" style="display: block; text-align: center;">
         <video id="video-entrada" width="800" autoplay preload="auto" controls>
-            <source src="/videos/video-inicio.mp4" type="video/mp4"> <!-- Ruta actualizada -->
+            <source src="./videos/video-inicio.mp4" type="video/mp4"> <!-- Ruta actualizada -->
             Tu navegador no soporta el elemento de video.
         </video>
         <br>
@@ -26,7 +26,7 @@
     <p id="resultado-final-bien" class="text-border" style="font-size: 1.5rem;">¡Felicidades lo hiciste muy bien!</p>
     <p id="respuestas-correctas-bien" class="text-border" style="font-size: 1.5rem;"></p> <!-- Mover respuestas correctas aquí -->
     <video id="video-salida-bien" width="600">
-        <source src="/videos/video-final-bien.mp4" type="video/mp4">
+        <source src="./videos/video-final-bien.mp4" type="video/mp4">
     </video>
     <br>
     <button id="boton-final-bien" class="opcion boton-final" onclick="reiniciarQuiz()" disabled>VUELVE A INTENTARLO</button>
@@ -37,21 +37,21 @@
     <p id="resultado-final-mal" class="text-border" style="font-size: 1.5rem;">¡Mala Suerte!</p>
     <p id="respuestas-correctas-mal" class="text-border" style="font-size: 1.5rem;"></p> <!-- Mover respuestas correctas aquí -->
     <video id="video-salida-mal" width="600">
-        <source src="/videos/video-final-mal.mp4" type="video/mp4">
+        <source src="./videos/video-final-mal.mp4" type="video/mp4">
     </video>
     <br>
     <button id="boton-final-mal" class="opcion boton-final" onclick="reiniciarQuiz()" disabled>VUELVE A INTENTARLO</button>
 </div>
 
-<audio id="audio-exito" src="extras/exito.mp3"></audio>
-<audio id="audio-fracaso" src="extras/fracas.mp3"></audio>
-<img id="exito-gif" src="extras/bien.gif" style="display:none;">
+<audio id="audio-exito" src="./extras/exito.mp3"></audio>
+<audio id="audio-fracaso" src="./extras/fracas.mp3"></audio>
+<img id="exito-gif" src="./extras/bien.gif" style="display:none;">
     <!-- Quitar el audio de aquí para agregarlo dinámicamente -->
     <!-- <audio id="quiz-audio" src="extras/quiz.mp3"></audio> -->
-     <audio id="inicio-sonido" src="extras/inicio.mp3"></audio>
-    <img id="celebracion-gif" src="extras/correcto.gif" style="display: none;" alt="celebracion">
-    <audio id="celebracion-sonido" src="extras/mario-bros-woo-hoo.mp3"></audio>
-    <audio id="error-sonido" src="extras/perder.mp3"></audio>
+     <audio id="inicio-sonido" src="./extras/inicio.mp3"></audio>
+    <img id="celebracion-gif" src="./extras/correcto.gif" style="display: none;" alt="celebracion">
+    <audio id="celebracion-sonido" src="./extras/mario-bros-woo-hoo.mp3"></audio>
+    <audio id="error-sonido" src="./extras/perder.mp3"></audio>
 
     <div id="tablero-de-preguntas" style="display:none;">
         <div id="encabezado">
@@ -62,9 +62,9 @@
         <div class="opcion" id="opcion-3" onclick="seleccionarOpcion(2)">Opción 3</div>
     </div>
     <div id="pie-pagina">
-        <img src="logos/MOVIL SEG VIAL.png" alt="logo" class="logo1">
-        <img src="logos/Imagotipo vial.png" alt="logo2" class="logo2">
-        <img src="logos/logo azul-naranja.png" alt="logo3" class="logo3">
+        <img src="./logos/MOVIL SEG VIAL.png" alt="logo" class="logo1">
+        <img src="./logos/Imagotipo vial.png" alt="logo2" class="logo2">
+        <img src="./logos/logo azul-naranja.png" alt="logo3" class="logo3">
     </div> 
 </body>
 </html>
